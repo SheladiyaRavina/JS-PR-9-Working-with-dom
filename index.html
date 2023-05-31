@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Row:-
+        <br>
+        <input type="text" id="row1">
+        <br><br>
+        Columns:-
+        <br>
+        <input type="text" id="column">
+        <br><br>
+        <input type="button" value="submit" onclick="save()">
+      
+    </form>
+    <br>
+      <br>
+    <table border="1" cellpadding="8" id="root">
+
+    </table>
+</body>
+</html>
+
+<script type="text/javascript">
+
+    document.getElementById('root');
+    let save = () =>{
+        let r=document.getElementById('row1').value;
+        let c=document.getElementById('column').value;
+ 
+    for(let row=1;row<=r;row++){
+
+       let tr=document.createElement('tr'); 
+
+        for(let col=1;col<=c;col++){
+
+            let td = document.createElement('td');
+            tr.appendChild(td);
+        }
+    
+       root.appendChild(tr);
+    }
+    document.getElementById('row1').value="";
+    document.getElementById('column').value="";
+    }
+</script>
